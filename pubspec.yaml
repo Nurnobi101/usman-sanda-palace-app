@@ -1,0 +1,102 @@
+name: usman_sanda_palace
+description: "Official mobile app for Usman Sanda Palace"
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.1.0 <4.0.0'
+  flutter: ">=3.13.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  
+  # WebView
+  webview_flutter: ^4.4.2
+  webview_flutter_android: ^3.12.1
+  webview_flutter_wkwebview: ^3.9.4
+  
+  # Firebase
+  firebase_core: ^2.24.2
+  firebase_remote_config: ^4.3.8
+  firebase_analytics: ^10.7.4
+  firebase_auth: ^4.15.3
+  cloud_firestore: ^4.13.6
+  
+  # Ads & Consent
+  google_mobile_ads: ^5.1.0
+  
+  # Networking & Connectivity
+  connectivity_plus: ^5.0.2
+  http: ^1.1.2
+  
+  # UI & Navigation
+  cupertino_icons: ^1.0.2
+  flutter_svg: ^2.0.9
+  cached_network_image: ^3.3.0
+  
+  # Utilities
+  url_launcher: ^6.2.1
+  share_plus: ^7.2.1
+  package_info_plus: ^4.2.0
+  device_info_plus: ^9.1.1
+  permission_handler: ^11.1.0
+  path_provider: ^2.1.1
+  
+  # State Management
+  flutter_riverpod: ^2.4.9
+  riverpod_annotation: ^2.3.3
+  
+  # Development
+  flutter_dotenv: ^5.1.0
+  logger: ^2.0.2+1
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^3.0.0
+  
+  # Code Generation
+  riverpod_generator: ^2.3.9
+  build_runner: ^2.4.7
+  json_annotation: ^4.8.1
+  json_serializable: ^6.7.1
+  
+  # Icons & Splash
+  flutter_launcher_icons: ^0.13.1
+  flutter_native_splash: ^2.3.6
+
+flutter:
+  uses-material-design: true
+  
+  assets:
+    - assets/images/
+    - assets/icons/
+    - .env.development
+    - .env.production
+
+# App Icons Configuration
+flutter_icons:
+  android: "launcher_icon"
+  ios: true
+  image_path: "assets/icons/app_icon.png"
+  min_sdk_android: 21
+  web:
+    generate: false
+  windows:
+    generate: false
+  macos:
+    generate: false
+
+# Splash Screen Configuration
+flutter_native_splash:
+  color: "#1a365d"
+  image: "assets/images/splash_logo.png"
+  color_dark: "#0f172a"
+  image_dark: "assets/images/splash_logo_dark.png"
+  android_12:
+    image: "assets/images/splash_logo.png"
+    icon_background_color: "#1a365d"
+    image_dark: "assets/images/splash_logo_dark.png"
+    icon_background_color_dark: "#0f172a"
+  web: false
